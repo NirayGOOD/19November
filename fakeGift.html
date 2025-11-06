@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="fake.css" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<title>Фейковый подарок</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.video-background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			overflow: hidden;
+		}
+
+		.video-background video {
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+		}
+
+		/* Контент поверх видео */
+		.content {
+			position: relative;
+			z-index: 1;
+			color: white;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="video-background">
+			<video autoplay muted loop playsinline>
+				<source src="img/fakeGift.mp4" type="video/mp4" />
+				Ваш браузер не поддерживает видео.
+			</video>
+		</div>
+		<div class="container">
+			<div class="answer">
+				<a href="gameOver2.html" class="question">Я дарю тебе космос</a>
+				<a href="gameOver2.html" class="question"
+					>Хочешь настоящий подарок?</a
+				>
+				<a href="gameOver2.html" class="question">Назад</a>
+			</div>
+		</div>
+	</body>
+</html>
